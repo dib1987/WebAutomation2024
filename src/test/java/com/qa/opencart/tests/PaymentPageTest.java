@@ -1,16 +1,15 @@
 package com.qa.opencart.tests;
 
-import java.util.Map;
-
+import com.qa.opencart.base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.qa.opencart.base.BaseTest;
+import java.util.Map;
 
-public class ProductInfoPageTest extends BaseTest{
+public class PaymentPageTest extends BaseTest{
 	
 	
 	@BeforeClass
@@ -24,6 +23,7 @@ public class ProductInfoPageTest extends BaseTest{
 		resultsPage = accPage.doSearch("macbook");
 		productInfoPage = resultsPage.selectProduct("MacBook Pro");
 		Assert.assertEquals(productInfoPage.getProductHeader(), "MacBook Pro");
+		Assert.assertEquals(productInfoPage.getProductHeader(), "Claud AI");
 	}
 		
 	
@@ -40,7 +40,7 @@ public class ProductInfoPageTest extends BaseTest{
 		softAssert.assertEquals(actProductDataMap.get("Reward Points"), "800");
 		softAssert.assertEquals(actProductDataMap.get("Availability"), "In Stock");
 		softAssert.assertEquals(actProductDataMap.get("productprice"), "$2,000.00");
-		softAssert.assertEquals(actProductDataMap.get("extaxprice1"), "$2,000.00");
+		softAssert.assertEquals(actProductDataMap.get("extaxprice"), "$2,000.00");
 		softAssert.assertAll();
 	}
 	
