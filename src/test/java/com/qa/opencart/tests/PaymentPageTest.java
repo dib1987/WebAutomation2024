@@ -23,6 +23,7 @@ public class PaymentPageTest extends BaseTest{
 		resultsPage = accPage.doSearch("macbook");
 		productInfoPage = resultsPage.selectProduct("MacBook Pro");
 		Assert.assertEquals(productInfoPage.getProductHeader(), "MacBook Pro");
+		Assert.assertEquals(productInfoPage.getProductHeader(), "Claud AI");
 	}
 		
 	
